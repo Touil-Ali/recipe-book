@@ -1,10 +1,24 @@
 
 
 <template>
-<h1>test</h1>
-</template><script>
+  <div class="recipe-list">
+    <div class="recipe-card" v-for="recipe in recipes" :key="recipe.id">
+      <recipe-card :recipe="recipe" />
+    </div>
+  </div>
+ </template>
+ <script>
+import RecipeCard from "@/components/RecipeCard.vue";
+
 export default {
-  name: "RecipeList"
+  name: "RecipeList",
+  components: {RecipeCard},
+  props: {
+    recipes: {
+      type: Array,
+      required: true
+    }
+  }
 }
 </script>
 

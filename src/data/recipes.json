@@ -1,0 +1,78 @@
+{
+  "recipes": [
+    {
+      "id": 1,
+      "name": "Chicken Tagine",
+      "image": "src/assets/images/tajine.jpg",
+      "description": "A delicious Moroccan chicken tagine with spices and preserved lemons.",
+      "ingredients": [
+        {
+          "id": 1,
+          "name": "Chicken thighs",
+          "quantity": "4"
+        },
+        {
+          "id": 2,
+          "name": "Preserved lemons",
+          "quantity": "2"
+        },
+        {
+          "id": 3,
+          "name": "Cumin",
+          "quantity": "1 tsp"
+        }
+      ],
+      "instructions": [
+        {
+          "id": 1,
+          "description": "In a tagine, brown the chicken thighs in olive oil."
+        },
+        {
+          "id": 2,
+          "description": "Add the preserved lemons, cumin, and other spices."
+        },
+        {
+          "id": 3,
+          "description": "Simmer for 45 minutes until the chicken is tender."
+        }
+      ]
+      },
+        {
+          "id": 2,
+          "name": "Couscous with Vegetables",
+          "image": "src/assets/images/couscous.jpg",
+          "description": "A vegetarian Moroccan couscous with a variety of colorful vegetables.",
+          "ingredients": [
+            {
+              "id": 4,
+              "name": "Couscous",
+              "quantity": "1 cup"
+            },
+            {
+              "id": 5,
+              "name": "Carrots",
+              "quantity": "2"
+            },
+            {
+              "id": 6,
+              "name": "Zucchini",
+              "quantity": "1"
+            }
+          ],
+          "instructions": [
+            {
+              "id": 4,
+              "description": "Cook the couscous according to the package instructions."
+            },
+            {
+              "id": 5,
+              "description": "Steam the carrots and zucchini until tender."
+            },
+            {
+              "id": 6,
+              "description": "Serve the couscous with steamed vegetables on top."
+            }
+          ]
+          }
+          ]
+        }
