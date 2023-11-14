@@ -11,16 +11,20 @@ export default {
 </script>
 
 <template>
- <div class="recipe-detail">
+ <div v-if="recipe"  class="recipe-detail">
     <router-link to="/" class="back-link">Back to Recipes</router-link>
    <h2 class="recipe-title">{{ recipe.name }}</h2>
-   <img :src="recipe.image" alt="Recipe Image" class="recipe-image">
-    <p class="recipe-description">{{ recipe.description }}</p>
+   <img v-if="recipe.image" :src="'/' + recipe.image" alt="Recipe Image">
+
+   <p class="recipe-description">{{ recipe.description }}</p>
     <h3>Ingredients:</h3>
    <ol class="recipe-ingredients">
      <li v-for="step in recipe.instructions" :key="step.id">{{ step.description}}</li>
    </ol>
  </div>
+  <div v-else>
+    <p>Loading</p>
+  </div>
 </template>
 
 <style scoped>
