@@ -44,9 +44,9 @@
 
   <div class="recipe-list">
     <div class="flex justify-center">
-    <search-bar />
+    <search-bar :recipes="recipes" @filtre-recipe="handleFiltreRecipe"/>
     </div>
-    <div v-if="recipes.length > 0">
+    <div v-if="filtreRecipes.length > 0">
       <!-- Container -->
       <div class="mx-auto w-full max-w-7xl px-5 py-16 md:px-10 md:py-24 lg:py-32">
         <!-- Component -->
@@ -57,7 +57,7 @@
               <img class="" src="../assets/backgr.svg" alt="">
             </div>
     <router-link
-        v-for="recipe in recipes"
+        v-for="recipe in filtreRecipes"
         :key="recipe.id"
         :to="{ name: 'Recipe', params: { id: recipe.id } }"
     >
@@ -71,7 +71,7 @@
 
     </div>
     <div v-else>
-      <p>No Data ..</p>
+      <p class="flex justify-center p-28">No Recipe Found 😔 ..</p>
     </div>
   </div>
 
@@ -89,8 +89,18 @@ export default {
   data() {
     return {
       recipes: json.recipes,
+      filtreRecipes: [],
     };
   },
+  mounted() {
+    this.filtreRecipes = this.recipes;
+  },
+  methods: {
+    handleFiltreRecipe(filtredRecipes) {
+    this.filtreRecipes = filtredRecipes;
+    }
+  }
+
  }
 </script>
 <style scoped>

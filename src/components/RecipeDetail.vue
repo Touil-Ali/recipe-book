@@ -16,7 +16,7 @@ export default {
 
    <h2 class="recipe-title max-w-3xl ml-4 text-3xl font-bold md:text-5xl absolute top-48">{{ recipe.name }} 👨‍🍳</h2>
 
-   <p class="recipe-description mt-4 ml-5 text-[#636262] mt-12">{{ recipe.description }}</p>
+   <p class="recipe-description mt-12 ml-5 text-[#636262] mt-12">{{ recipe.description }}</p>
    <div class="mt-4 text-[#636262] ml-5">
     <h3 class="text-black">Ingredients:</h3>
 
