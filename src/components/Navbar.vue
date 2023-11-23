@@ -20,8 +20,8 @@ export default {
             <a href="#" class="font-inter rounded-lg pb-8 lg:px-6 lg:py-4 lg:pb-0 lg:hover:bg-[#FAE09D] lg:hover:text-gray-800">Guide</a>
           </div> <!-- MENU CONTENT 2 -->
           <div class="flex flex-col space-y-8 lg:flex lg:flex-row lg:space-x-3 lg:space-y-0" x-bind:class="isOpen ? 'show' : 'hidden'">
-            <a href="#" class="font-inter rounded-lg lg:px-6 lg:py-4 lg:hover:bg-[#FAE09D] lg:hover:text-gray-800 ">Sign Up</a>
-            <a href="#" class="relative mr-5 inline-block rounded-xl border border-[#FF914D] bg-white px-8 py-4 text-center font-semibold text-[#FF914D] [box-shadow:rgb(0,0,0)_6px_6px] hover:border-black md:mr-6">Drop You're Morrocan Recipe</a>
+            <a href="#" class="font-inter rounded-lg lg:px-6 lg:py-4 lg:hover:bg-[#FAE09D] lg:hover:text-gray-800 "><router-link :to="{name:'login'}">Sign In</router-link> </a>
+            <a href="#" class="relative mr-5 inline-block rounded-xl border border-[#FF914D] bg-white px-8 py-4 text-center font-semibold text-[#FF914D] [box-shadow:rgb(0,0,0)_6px_6px] hover:border-black md:mr-6"><router-link :to="{name:'inputForm'}" > Drop You're Morrocan Recipe</router-link></a>
           </div> <!-- BURGER MENU -->
           <a href="#" class="absolute right-5 lg:hidden" x-on:click.prevent="isOpen = !isOpen">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
