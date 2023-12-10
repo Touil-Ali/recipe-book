@@ -26,10 +26,7 @@ export default {
        }
 
 }
-const isAuthenticated = (context) => {
-    const token = context.state.token;
-    return token != null && token != '';
-}
+
 
 const responsefunction = (responseData,context,response) => {
     if(!response.ok){

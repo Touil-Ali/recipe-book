@@ -1,29 +1,42 @@
-# recipe-book
+![img.png](img.png)
+# Moroccan Recipes
 
-This template should help get you started developing with Vue 3 in Vite.
+This project is a web application built with Vue.js. It's a platform for sharing and discovering Moroccan recipes.
 
-## Recommended IDE Setup
+## Project setup
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+First, clone the repository to your local machine:
 
-## Customize configuration
+```bash
+git clone <repository_url>
+```
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+Then, navigate into the project directory:
 
-## Project Setup
+```bash
+cd <project_name>
+```
 
-```sh
+Install the necessary dependencies:
+
+```bash
 npm install
 ```
 
-### Compile and Hot-Reload for Development
+## Running the application
 
-```sh
-npm run dev
+To start the application in development mode, run:
+
+```bash
+npm run serve
 ```
 
-### Compile and Minify for Production
+The application will be available at `http://localhost:8080`.
 
-```sh
-npm run build
-```
+## Contributing
+
+We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.md) for more details.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.

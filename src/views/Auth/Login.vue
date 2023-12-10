@@ -11,7 +11,7 @@ export default {
     }
   },
   onMounted() {
-    if(this.$store.getters.isAuthenticated) {
+    if(this.$store.getters.isAuth) {
       this.$router.push({ name: "Home" })
     }
   },
@@ -52,7 +52,7 @@ export default {
           <div class="mx-auto mb-4 max-w-[400px] pb-4">
             <form name="wf-form-password"  method="POST">
             <h1 class="font-bold text-center text-2xl mb-5">Login </h1>
-              <span v-if="showErrors" class="text-red-600 font-black mb-5">Please Fill The Form</span>
+              <span v-if="showErrors" class="text-red-600 font-black mb-5">Incorrect Password or Email</span>
               <div class="relative">
                 <img alt="" src="https://assets.website-files.com/6458c625291a94a195e6cf3a/6458c625291a9455fae6cf89_EnvelopeSimple.svg" class="absolute left-[5%] top-[26%] inline-block" />
                 <input type="email" v-model="email" class="mb-4 block h-9 w-full rounded-md border border-solid border-[#FF894D]  px-3 py-6 pl-14 text-sm text-[#333333]" placeholder="Email Address" />
