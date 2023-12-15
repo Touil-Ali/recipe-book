@@ -26,3 +26,4 @@ coverage
 *.njsproj
 *.sln
 *.sw?
+/! Please see our [Contributing Guidelines](CONTRIBUTING.md) for more details.

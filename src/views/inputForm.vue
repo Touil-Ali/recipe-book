@@ -1,7 +1,22 @@
 <script>
 export default {
-  name: "inputForm"
-}
+  name: "inputForm",
+  data() {
+    return {
+      email: "",
+      name: "",
+      nameRecipe: "",
+      description: "",
+      image: "",
+    };
+  },
+  methods: {
+    submit() {
+
+    },
+  }
+};
+
 </script>
 
 <template>
@@ -17,26 +32,26 @@ export default {
               <p>Share your recipe with the world</p>
               <div class="text-start ">
                 <label for="input-label" class="block text-sm font-medium mb-2 ">Email</label>
-                <input type="email" id="input-label" class="py-3 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none  mb-2.5" placeholder="you@site.com">
+                <input v-model="email" type="email" id="input-label" class="py-3 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none  mb-2.5" placeholder="you@site.com">
 
                 <label for="input-label" class="block text-sm font-medium mb-2 ">Your Name</label>
 
-                <input type="text" class="py-3 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none mb-2.5" placeholder="Readonly input" readonly>
+                <input v-model="name" type="text" class="py-3 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none mb-2.5" placeholder=" input">
 
                 <label for="input-label" class="block text-sm font-medium mb-2 ">Name of Your Recipe</label>
 
-                <input type="text" class="py-3 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none mb-2.5" placeholder="Readonly input" readonly>
+                <input v-model="nameRecipe" type="text" class="py-3 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none mb-2.5" placeholder=" input" >
 
                 <label for="input-label" class="block text-sm font-medium mb-2 ">Description</label>
 
-                <textarea class="py-3 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none  mb-1.5" rows="3"></textarea>
+                <textarea v-model="description" class="py-3 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none  mb-1.5" rows="3"></textarea>
 
                 <label for="input-label" class="block text-sm font-medium mb-2 ">Choose Your Recipe Image</label>
 
                 <form>
                   <label class="block">
                     <span class="sr-only">Choose Your Recipe Image</span>
-                    <input type="file" class="block w-full text-sm text-gray-500
+                    <input v-on="image" type="file" class="block w-full text-sm text-gray-500
                             file:me-4 file:py-2 file:px-4
                             file:rounded-lg file:border-0
                             file:text-sm file:font-semibold
@@ -47,11 +62,11 @@ export default {
                   </label>
                 </form>
                 <div class="text-center space-x-1.5">
-                <button type="button" class=" py-3 px-4 inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent  bg-[#FF894D] text-white hover:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none mt-5">
+                <button @click.prevent="submit" type="button" class=" py-3 px-4 inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent  bg-[#FF894D] text-white hover:bg-blue-700 disabled:opacity-50  mt-5">
                   Submit
                 </button>
                 <router-link :to="{name:'Home'}">
-                  <button type="button" class="py-3 px-4 inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent text-black hover:bg-white disabled:opacity-50 disabled:pointer-events-none">
+                  <button  type="button" class="py-3 px-4 inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent text-black hover:bg-white disabled:opacity-50 disabled:pointer-events-none">
                     Go Back
                   </button>
                   </router-link>
