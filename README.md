@@ -32,6 +32,9 @@ npm run serve
 ```
 
 The application will be available at `http://localhost:8080`.
+## DEMO
+
+Check out the live demo [here](https://touil-ali.github.io/recipe-book/).
 
 ## Contributing
 
